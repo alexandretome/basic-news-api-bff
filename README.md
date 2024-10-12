@@ -5,17 +5,18 @@
 
 ###### Front-End
 
-- [text](https://)
-- [text](https://)
-- [text](https://)
+- [NextJS](https://nextjs.org/)
+- [Tailwind](https://tailwindcss.com/)
 
 ###### Back-End
 
-- [text](https://)
-- [text](https://)
-- [text](https://)
+- [NestJS](https://nestjs.com/)
+- [PostgresSQL](https://www.postgresql.org/)
+- [Redis](https://redis.io/)
 
 
-#### Solution Architecture
+#### Architecture
 
-#### Software Architecture
+**C4 - Components**
+
+![C4 Model - Components Diagram](./doc-files/basic-news.png)
