@@ -1,12 +1,16 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { AppService } from './app.service';
+import { GetEverythingRequestDTO } from './dtos/getEverythingRequest.dto';
+import { GetEverythingResponseDTO } from './dtos/getEverythingResponse.dto';
 
-@Controller()
+@Controller('articles')
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Post('search')
+  postSearch(
+    @Body() getEverythingRequestDTO: GetEverythingRequestDTO,
+  ): GetEverythingResponseDTO {
+    return this.appService.getSearch(getEverythingRequestDTO);
   }
 }
