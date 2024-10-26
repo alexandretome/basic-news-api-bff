@@ -10,4 +10,8 @@ export class SourceDTO {
     description: 'The identifier name for the source this article came from.',
   })
   name: string;
+
+  constructor(init?: Partial<SourceDTO>) {
+    Object.assign(this, init);
+  }
 }

@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "doc-files"
+		},
+		{
+			"path": "news-api"
+		},
+		{
+			"path": "news-app"
+		}
+	],
+	"settings": {},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [ {
+			"type": "node",
+			"request": "launch",
+			"name": "Debug Nest App",
+			"runtimeExecutable": "npm",
+			"runtimeArgs": ["run", "start:debug", "--", "--inspect-brk"],
+			"autoAttachChildProcesses": true,
+			"restart": true,
+			"sourceMaps": true,
+			"stopOnEntry": false,
+			"console": "integratedTerminal",
+			"skipFiles": ["<node_internals>/**"],
+			"program": "${workspaceFolder}/src/main.ts",
+			"preLaunchTask": "tsc: build - tsconfig.json",
+			"outFiles": ["${workspaceFolder}/dist/**/*.js"]
+		  }],
+		"compounds": []
+	}
+}

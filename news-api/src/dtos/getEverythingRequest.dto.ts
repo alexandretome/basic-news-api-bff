@@ -44,7 +44,7 @@ export class GetEverythingRequestDTO {
   })
   page: number;
 
-  constructor(partial: Partial<GetEverythingRequestDTO>) {
-    Object.assign(this, partial);
+  constructor(init?: Partial<GetEverythingRequestDTO>) {
+    Object.assign(this, init);
   }
 }

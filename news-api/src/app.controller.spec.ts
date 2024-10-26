@@ -1,6 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { GetEverythingRequestDTO } from './dtos/getEverythingRequest.dto';
+import { GetEverythingResponseDTO } from './dtos/getEverythingResponse.dto';
 
 describe('AppController', () => {
   let appController: AppController;
@@ -16,7 +18,10 @@ describe('AppController', () => {
 
   describe('root', () => {
     it('should return "Hello World!"', () => {
-      expect(appController.getSearch()).toBe('Hello World!');
+      const result: GetEverythingResponseDTO = new GetEverythingResponseDTO();
+      expect(
+        appController.postSearch(new GetEverythingRequestDTO()),
+      ).toEqual<GetEverythingResponseDTO>(result);
     });
   });
 });

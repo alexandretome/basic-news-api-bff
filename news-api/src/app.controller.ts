@@ -8,9 +8,9 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Post('search')
-  postSearch(
+  async postSearch(
     @Body() getEverythingRequestDTO: GetEverythingRequestDTO,
-  ): GetEverythingResponseDTO {
+  ): Promise<GetEverythingResponseDTO> {
     return this.appService.getSearch(getEverythingRequestDTO);
   }
 }

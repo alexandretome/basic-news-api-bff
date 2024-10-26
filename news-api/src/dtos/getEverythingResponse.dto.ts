@@ -18,7 +18,7 @@ export class GetEverythingResponseDTO {
   })
   articles: Array<ArticleDTO>;
 
-  constructor(partial: Partial<GetEverythingResponseDTO>) {
-    Object.assign(this, partial);
+  constructor(init?: Partial<GetEverythingResponseDTO>) {
+    Object.assign(this, init);
   }
 }

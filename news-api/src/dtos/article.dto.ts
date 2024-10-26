@@ -44,4 +44,8 @@ export class ArticleDTO {
     maxLength: 200,
   })
   content: string;
+
+  constructor(init?: Partial<ArticleDTO>) {
+    Object.assign(this, init);
+  }
 }
